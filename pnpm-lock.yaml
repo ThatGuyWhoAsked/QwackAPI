@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  axios: ^1.1.3
+  axios: ^0.22.0
   chalk: ^4.1.2
   cors: ^2.8.5
   dotenv: ^16.0.2
@@ -11,11 +11,11 @@ specifiers:
   moment: ^2.29.4
   nodemon: ^2.0.20
   prismarine-nbt: ^2.2.1
-  skyhelper-networth: ^1.2.6
+  skyhelper-networth: ^1.3.1
   util: ^0.12.4
 
 dependencies:
-  axios: 1.2.0
+  axios: 0.27.2
   chalk: 4.1.2
   cors: 2.8.5
   dotenv: 16.0.3
@@ -84,16 +84,6 @@ packages:
     dependencies:
       follow-redirects: 1.15.2
       form-data: 4.0.0
-    transitivePeerDependencies:
-      - debug
-    dev: false
-
-  /axios/1.2.0:
-    resolution: {integrity: sha512-zT7wZyNYu3N5Bu0wuZ6QccIf93Qk1eV8LOewxgjOZFd2DenOs98cJ7+Y6703d0wkaXGY6/nZd4EweJaHz9uzQw==}
-    dependencies:
-      follow-redirects: 1.15.2
-      form-data: 4.0.0
-      proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
     dev: false
@@ -724,10 +714,6 @@ packages:
     dependencies:
       forwarded: 0.2.0
       ipaddr.js: 1.9.1
-    dev: false
-
-  /proxy-from-env/1.1.0:
-    resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
     dev: false
 
   /pstree.remy/1.1.8:
