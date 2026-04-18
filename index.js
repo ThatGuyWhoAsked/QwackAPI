@@ -64,10 +64,31 @@ app.get("/v2/stats/:uuid/:profileid", statsRoute);
 app.use(NotFound);
 app.use(ErrorHandler);
 
-refreshCollections();
-refreshPrices();
-refreshAuctions();
-checkForUpdate();
+(async () => {
+  try {
+    await refreshCollections();
+  } catch (err) {
+    console.log("[STARTUP] refreshCollections failed:", err);
+  }
+
+  try {
+    await refreshPrices();
+  } catch (err) {
+    console.log("[STARTUP] refreshPrices failed:", err);
+  }
+
+  try {
+    await refreshAuctions();
+  } catch (err) {
+    console.log("[STARTUP] refreshAuctions failed:", err);
+  }
+
+  try {
+    checkForUpdate();
+  } catch (err) {
+    console.log("[STARTUP] checkForUpdate failed:", err);
+  }
+})();
 
 app.listen(port, () => {
   console.log(`Now listening on port ${port}`);
